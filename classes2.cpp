@@ -247,10 +247,10 @@ class Point {
         }
         // constructor by default 
 
-        // Point(int valueOfX, int valueOfY) {
-        //     x = valueOfX;
-        //     y = valueOfY;
-        // }
+        Point(int valueOfX, int valueOfY) {
+            x = valueOfX;
+            y = valueOfY;
+        }
         // constructor with parametres 
 
         int GetX() {
@@ -272,6 +272,7 @@ class Point {
 
 int main() {
     Point a;
+    a.Print();
 
     return 0;
 }
