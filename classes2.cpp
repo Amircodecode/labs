@@ -253,6 +253,11 @@ class Point {
         }
         // constructor with parametres 
 
+
+        Point(int valuex, bool boolean) {
+            x = valuex;
+            y = 1;
+        }
         int GetX() {
             return x;
         }
