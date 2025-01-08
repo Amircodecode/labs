@@ -275,12 +275,29 @@ class Point {
         }
 };
 
+class MyClass {
+    public: 
+        MyClass() {
+            cout << "constructor" << endl;
+        }
+        
+        ~MyClass() {
+            cout << "destructor" << endl;
+        }
+};
+
+
+
 int main() {
-    Point a;
-    a.Print();
-    Point b(18,19);
-    b.Print();
+    // Point a;
+    // a.Print();
+    // Point b(18,19);
+    // b.Print();
     
+    MyClass a;
+
+
+
 
     return 0;
 }
