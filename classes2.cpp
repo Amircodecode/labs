@@ -275,33 +275,74 @@ class Point {
         }
 };
 
-class MyClass {
-    int data;
-    public: 
-        MyClass(int value) {
-            data = value;
-            cout << "constructor" << endl;
-        }
+// class MyClass {
+//     int data;
+//     public: 
+//         MyClass(int value) {
+//             data = value;
+//             cout << "constructor" << endl;
+//         }
         
-        ~MyClass() {
+//         ~MyClass() {
             
-            cout << "destructor" << endl;
-        }
-};
+//             cout << "destructor" << endl;
+//         }
+// };
 
 
 
-int main() {
+// int main() {
     // Point a;
     // a.Print();
     // Point b(18,19);
     // b.Print();
 
-    MyClass a(34);
+    // MyClass a(34);
 
 
 
+
+//     return 0;
+// }
+
+class Rectangle {
+    private: 
+        int width;
+        int  height;
+    
+    public:
+        Rectangle() {
+            width = 1;
+            height = 1;
+        }
+
+        Rectangle(int Width, int Height) {
+            width = Width;
+            height = Height;
+        }
+
+        int getArea() {
+            return width * height;
+        }
+        int getPerimeter() {
+            return (width + height) * 2;
+        }
+        void setWidth(int w) {
+            width = w;
+        }
+        void setHeight(int h) {
+            height = h;
+        }
+};
+
+
+int main() {
+
+    Rectangle firstRectange(3, 4);
+    firstRectange.setWidth(7);
+    firstRectange.setHeight(6);
+    cout << firstRectange.getPerimeter() << endl;
+    cout << firstRectange.getArea() << endl;
 
     return 0;
 }
-
