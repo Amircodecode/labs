@@ -61,33 +61,43 @@ using namespace std;
 //     return 0;
 // }
 
-class Point {
-    private:
-        int x;
-        int y;
+// class Point {
+//     private:
+//         int x;
+//         int y;
 
-    public:
-        int GetX() {
-            return x;
-        }
+//     public:
+//         int GetY() {
+//             return y;
+//         }
+//         int GetX() {
+//             return x;
+//         }
 
-        void SetX(int valueX) {
-            x = valueX;
-        }
+//         void SetY(int valueY) {
+//             y = valueY;
+//         }
+//         void SetX(int valueX) {
+//             x = valueX;
+//         }
 
-        void Print () {
-            cout << "x = " << x << " y = " << y << endl;
-        }
-};
+//         void Print () {
+//             cout << "x = " << x << " y = " << y << endl;
+//         }
+// };
 
-int main() {
+// int main() {
 
-    Point a;
-    a.SetX(69);
-    int result = a.GetX();
-    // a.Print();
+//     Point a;
+//     a.SetX(69);
+//     a.SetY(18);
+//     int resultY = a.GetY();
+//     int resultX = a.GetX();
+//     // a.Print();
     
-    cout << result << endl;
+//     cout << " x = " << resultX << endl;
+//     cout << " y = " << resultY << endl;
 
-    return 0;
-}
+//     return 0;
+// }
+
