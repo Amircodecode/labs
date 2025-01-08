@@ -171,35 +171,65 @@ using namespace std;
 //     return 0;
 // }
 
-class item {
+// the class work 
+// class item {
+//     private:
+//         int number;
+//         float cost;
+
+//         void read() {
+
+//             cout << "good morning" << endl;
+
+//         }
+
+//     public: 
+//         void getdata(int a, float b);
+//         void putDate() {
+//             read();
+//             cout << "number = " << number << endl;
+//             cout << "cost = " << cost << endl;
+//         }
+// };
+
+// void item::getdata(int a, float b) {
+//     number = a;
+//     cost = b;
+// }
+
+// int main() {
+//     item x;
+//     cout << "object x = " << endl;
+//     x.getdata(18, 19);
+//     x.putDate();
+//     return 0;
+// }
+
+class classone {
     private:
-        int number;
-        float cost;
+        int num;
 
-        void read() {
-
-            cout << "good morning" << endl;
-            
+    public:
+        void set(int x) {
+            num = x;
+        }
+        int get() {
+            return num;
         }
 
-    public: 
-        void getdata(int a, float b);
-        void putDate() {
-            read();
-            cout << "number = " << number << endl;
-            cout << "cost = " << cost << endl;
-        }
 };
 
-void item::getdata(int a, float b) {
-    number = a;
-    cost = b;
-}
-
 int main() {
-    item x;
-    cout << "object x = " << endl;
-    x.getdata(18, 19);
-    x.putDate();
+    classone one;
+    classone two;
+
+    one.set(15);
+    two.set(18);
+    cout << "one = " << one.get() << endl;
+    cout << "two = " << two.get() << endl;
+
+    cin.ignore();
+    cin.clear();
+
     return 0;
 }
