@@ -245,6 +245,13 @@ class Point {
             x = 0;
             y = 0;
         }
+        // constructor by default 
+
+        // Point(int valueOfX, int valueOfY) {
+        //     x = valueOfX;
+        //     y = valueOfY;
+        // }
+        // constructor with parametres 
 
         int GetX() {
             return x;
@@ -264,6 +271,7 @@ class Point {
 };
 
 int main() {
-    
+    Point a;
+
     return 0;
 }
