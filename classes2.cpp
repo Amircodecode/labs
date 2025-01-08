@@ -49,7 +49,7 @@ class Point {
         int z;
 
         void PrintY() {
-            cout << "z = " << z << endl;
+            cout << " PrintY " << "z = " << z << endl;
         }
 };
 
