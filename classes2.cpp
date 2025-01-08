@@ -235,3 +235,31 @@ using namespace std;
 //     return 0;
 // }
 
+class Point {
+    private:
+        int x;
+        int  y;
+
+    public: 
+        Point() {
+            x = 0;
+            y = 0;
+        }
+
+        int GetX() {
+            return x;
+        }
+        int GetY() {
+            return y;
+        }
+        void SetX(int valueX) {
+            x = valueX;
+        }
+        void SetY(int valueY) {
+            y = valueY;
+        }
+        void Print() {
+            cout << "x = " << x << " y = " << y << endl;
+        }
+};
+
