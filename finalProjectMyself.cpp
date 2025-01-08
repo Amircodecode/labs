@@ -34,10 +34,21 @@ int main() {
         }
     }
 
-    int passStudents[numberStudent];
+    int passScores[numberStudent];
     string passNames[numberStudent];
     int cout = 0;
 
-    
+    for (int i = 0; i < numberStudent; i++) {
+        if (scores[i] >= 50) {
+            passScores[cout] = scores[i];
+            passNames[cout] = names[i];
+            cout++;
+        }
+    }
+
+    for (int k = 0; k < 5; k++) {
+       cout << passNames[k] << ": " << passScores[k] << endl;
+    }
+
     return 0;
 }
