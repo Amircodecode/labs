@@ -3,51 +3,65 @@
 
 using namespace std;
 
+const int MAX_STUDENTS = 100;
 
 int main() {
-    int numberStudent;
-    cout << "enter the number of studets: ";
-    cin >> numberStudent;
+    int numStudents;
 
-    int *scores = new int[numberStudent];
-    string *names = new string[numberStudent];
+    cout << "Enter the number of students: ";
+    cin >> numStudents;
 
-    for (int i = 0; i < numberStudent; i++) {
-        cout << "enter the " << i + 1 << " student name ";
-        cin >> names[i];
-
-        cout << "enter the " << i + 1 << " score ";
-        cin >> scores[i];
+    if (numStudents > MAX_STUDENTS) {
+        cout << "Error: Exceeded maximum number of students." << endl;
+        return 1;
     }
 
-    for (int i = 0; i < numberStudent - 1; i++) {
-        for (int j = 0; j < numberStudent - i - 1; j++) {
-            if (scores[j] < scores[j + 1]) {
-                int tempScore = scores[j];
-                scores[j] = scores[j + 1];
-                scores[j + 1] = tempScore;
+    string studentNames[MAX_STUDENTS];
+    int studentScores[MAX_STUDENTS];
 
-                string tempName = names[j];
-                names[j] = names[j + 1];
-                names[j + 1] = tempName;
+    // Input student names and scores
+    for (int i = 0; i < numStudents; ++i) {
+        cout << "Enter name of student " << i + 1 << ": ";
+        cin >> studentNames[i];
+
+        cout << "Enter score of student " << i + 1 << ": ";
+        cin >> studentScores[i];
+    }
+
+    // Bubble Sort (ascending order)
+    for (int i = 0; i < numStudents - 1; ++i) {
+        for (int j = 0; j < numStudents - i - 1; ++j) {
+            if (studentScores[j] < studentScores[j + 1]) {
+                // Swap scores
+                int tempScore = studentScores[j];
+                studentScores[j] = studentScores[j + 1];
+                studentScores[j + 1] = tempScore;
+
+                // Swap names (important for maintaining correspondence)
+                string tempName = studentNames[j];
+                studentNames[j] = studentNames[j + 1];
+                studentNames[j + 1] = tempName;
             }
         }
     }
 
-    int passScores[numberStudent];
-    string passNames[numberStudent];
-    int cout = 0;
+    // Separate pass and fail students
+    string passNames[MAX_STUDENTS];
+    int passScores[MAX_STUDENTS];
+    int passCount = 0;
 
-    for (int i = 0; i < numberStudent; i++) {
-        if (scores[i] >= 50) {
-            passScores[cout] = scores[i];
-            passNames[cout] = names[i];
-            cout++;
+    for (int i = 0; i < numStudents; ++i) {
+        if (studentScores[i] >= 72) {
+            passNames[passCount] = studentNames[i];
+            passScores[passCount] = studentScores[i];
+            passCount++;
         }
     }
 
-    for (int k = 0; k < 5; k++) {
-       cout << passNames[k] << ": " << passScores[k] << endl;
+    // Display top 5 highest pass scores
+    cout << "\nTop 5 Highest Pass Scores:\n";
+    for (int i = 0; i < min(5, passCount); ++i) {
+        cout << passNames[i] << ": " << passScores[i] << endl;
     }
 
     return 0;
