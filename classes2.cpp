@@ -305,44 +305,73 @@ class Point {
 //     return 0;
 // }
 
-class Rectangle {
-    private: 
-        int width;
-        int  height;
+// class Rectangle {
+//     private: 
+//         int width;
+//         int  height;
     
+//     public:
+//         Rectangle() {
+//             width = 1;
+//             height = 1;
+//         }
+
+//         Rectangle(int Width, int Height) {
+//             width = Width;
+//             height = Height;
+//         }
+
+//         int getArea() {
+//             return width * height;
+//         }
+//         int getPerimeter() {
+//             return (width + height) * 2;
+//         }
+//         void setWidth(int w) {
+//             width = w;
+//         }
+//         void setHeight(int h) {
+//             height = h;
+//         }
+// };
+
+
+// int main() {
+
+//     Rectangle firstRectange(3, 4);
+//     firstRectange.setWidth(7);
+//     firstRectange.setHeight(6);
+//     cout << firstRectange.getPerimeter() << endl;
+//     cout << firstRectange.getArea() << endl;
+
+//     return 0;
+// }
+
+
+class BankAccount {
+    private:
+        string accoutnNumber;
+        int balance;
+
     public:
-        Rectangle() {
-            width = 1;
-            height = 1;
+        BankAccount(string accNum, int initialBalance) {
+            accoutnNumber = accNum;
+            balance = initialBalance;
         }
 
-        Rectangle(int Width, int Height) {
-            width = Width;
-            height = Height;
+        void deposit(double amount) {
+            balance += amount;
         }
-
-        int getArea() {
-            return width * height;
+        void dispalyAccoutInfo() {
+            cout << "account number: " << accoutnNumber << endl
+                 << " balance: " << balance << endl;
         }
-        int getPerimeter() {
-            return (width + height) * 2;
-        }
-        void setWidth(int w) {
-            width = w;
-        }
-        void setHeight(int h) {
-            height = h;
+        bool withdraw(double amount) {
+            balance -= amount;
         }
 };
 
-
 int main() {
-
-    Rectangle firstRectange(3, 4);
-    firstRectange.setWidth(7);
-    firstRectange.setHeight(6);
-    cout << firstRectange.getPerimeter() << endl;
-    cout << firstRectange.getArea() << endl;
-
+    
     return 0;
 }
