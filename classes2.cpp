@@ -273,6 +273,9 @@ class Point {
 int main() {
     Point a;
     a.Print();
+    Point b(18,19);
+    b.Print();
+    
 
     return 0;
 }
