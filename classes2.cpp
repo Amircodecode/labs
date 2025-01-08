@@ -10,8 +10,13 @@ class Human {
         string name;
     
         void Print() {
-            cout << "name: " << name << " weight " << weight << " age " << age << endl;
+
+            cout << "name: " << name << 
+                    " weight " << weight <<     
+                    " age " << age << endl;
+
         }
+
 };
 
 
@@ -22,6 +27,8 @@ int main() {
     firstHuman.name = "Amir";
     firstHuman.weight = 75;
 
-    cout << firstHuman.age << firstHuman.name << firstHuman.weight << endl;
+    // cout << firstHuman.age << firstHuman.name << firstHuman.weight << endl;
+
+    firstHuman.Print();
     return 0;
 }
