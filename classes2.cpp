@@ -170,3 +170,36 @@ using namespace std;
 
 //     return 0;
 // }
+
+class item {
+    private:
+        int number;
+        float cost;
+
+        void read() {
+
+            cout << "good morning" << endl;
+            
+        }
+
+    public: 
+        void getdata(int a, float b);
+        void putDate() {
+            read();
+            cout << "number = " << number << endl;
+            cout << "cost = " << cost << endl;
+        }
+};
+
+void item::getdata(int a, float b) {
+    number = a;
+    cost = b;
+}
+
+int main() {
+    item x;
+    cout << "object x = " << endl;
+    x.getdata(18, 19);
+    x.putDate();
+    return 0;
+}
