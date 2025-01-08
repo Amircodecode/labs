@@ -41,10 +41,16 @@ class Point {
 
         void Print() {
             cout << "y = " << y << " x = " << x << " z = " << z << endl;
+
+            PrintY();
         }
     
     private:
         int z;
+
+        void PrintY() {
+            cout << "z = " << z << endl;
+        }
 };
 
 int main() {
