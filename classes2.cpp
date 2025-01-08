@@ -276,12 +276,15 @@ class Point {
 };
 
 class MyClass {
+    int data;
     public: 
-        MyClass() {
+        MyClass(int value) {
+            data = value;
             cout << "constructor" << endl;
         }
         
         ~MyClass() {
+            
             cout << "destructor" << endl;
         }
 };
@@ -293,8 +296,8 @@ int main() {
     // a.Print();
     // Point b(18,19);
     // b.Print();
-    
-    MyClass a;
+
+    MyClass a(34);
 
 
 
