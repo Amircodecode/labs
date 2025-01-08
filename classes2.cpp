@@ -263,3 +263,7 @@ class Point {
         }
 };
 
+int main() {
+    
+    return 0;
+}
