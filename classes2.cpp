@@ -101,3 +101,31 @@ using namespace std;
 //     return 0;
 // }
 
+class CoffeGrinder {
+    private:
+        bool checkVoltage() {
+            return true;
+        } 
+
+    public:
+        void Start() {
+            bool voltageIsNormal = checkVoltage();
+
+            if (voltageIsNormal) {
+                cout << "started to work " << endl;
+            }
+            else {
+                cout << "coffee will not be you " << endl;
+            }
+
+        }
+};
+
+int main() {
+    CoffeGrinder a;
+    a.Start();
+
+
+
+    return 0;
+}
