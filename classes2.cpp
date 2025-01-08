@@ -205,31 +205,33 @@ using namespace std;
 //     return 0;
 // }
 
-class classone {
-    private:
-        int num;
+// class classone {
+//     private:
+//         int num;
 
-    public:
-        void set(int x) {
-            num = x;
-        }
-        int get() {
-            return num;
-        }
+//     public:
+//         void set(int x) {
+//             num = x;
+//         }
+//         int get() {
 
-};
+//             return num;
+//         }
 
-int main() {
-    classone one;
-    classone two;
+// };
 
-    one.set(15);
-    two.set(18);
-    cout << "one = " << one.get() << endl;
-    cout << "two = " << two.get() << endl;
+// int main() {
+//     classone one;
+//     classone two;
 
-    cin.ignore();
-    cin.clear();
+//     one.set(15);
+//     two.set(18);
+//     cout << "one = " << one.get() << endl;
+//     cout << "two = " << two.get() << endl;
 
-    return 0;
-}
+//     cin.ignore();
+//     cin.clear();
+
+//     return 0;
+// }
+
