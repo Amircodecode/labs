@@ -30,5 +30,6 @@ int main() {
     // cout << firstHuman.age << firstHuman.name << firstHuman.weight << endl;
 
     firstHuman.Print();
+    
     return 0;
 }
