@@ -83,8 +83,11 @@ class Point {
 int main() {
 
     Point a;
-    a.Print();
+    a.SetX(69);
+    int result = a.GetX();
+    // a.Print();
     
+    cout << result << endl;
 
     return 0;
 }
