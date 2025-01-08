@@ -101,31 +101,70 @@ using namespace std;
 //     return 0;
 // }
 
-class CoffeGrinder {
+// class CoffeGrinder {
+//     private:
+//         bool checkVoltage() {
+//             return false;
+//         } 
+
+//     public:
+//         void Start() {
+//             bool voltageIsNormal = checkVoltage();
+
+//             if (voltageIsNormal) {
+//                 cout << "started to work " << endl;
+//             }
+//             else {
+//                 cout << "coffee will not be you " << endl;
+//             }
+
+//         }
+// };
+
+// int main() {
+//     CoffeGrinder a;
+//     a.Start();
+//     return 0;
+// }
+
+
+class Point {
     private:
-        bool checkVoltage() {
-            return true;
-        } 
+        int x;
+        int y;
 
     public:
-        void Start() {
-            bool voltageIsNormal = checkVoltage();
 
-            if (voltageIsNormal) {
-                cout << "started to work " << endl;
-            }
-            else {
-                cout << "coffee will not be you " << endl;
-            }
+        Point(int valueX, int valueY) {
+            x = valueX;
+            y = valueY;
+        }
 
+
+        int GetY() {
+            return y;
+        }
+        int GetX() {
+            return x;
+        }
+
+        void SetY(int valueY) {
+            y = valueY;
+        }
+        void SetX(int valueX) {
+            x = valueX;
+        }
+
+        void Print () {
+            cout << "x = " << x << " y = " << y << endl;
         }
 };
 
 int main() {
-    CoffeGrinder a;
-    a.Start();
-
-
+    Point a(18, 19);
+    Point b(23, 76);
+    a.Print();
+    b.Print();
 
     return 0;
 }
