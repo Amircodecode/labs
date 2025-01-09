@@ -467,20 +467,34 @@ using namespace std;
 class Myclass {
     public:
         int *data;
-        int Size;
 
         Myclass(int size) {
+            this->Size = size;
             this->data = new int[size];
 
-            
+            for (int i = 0; i < size; i++) {
+                data[i] = i;
+            }
+
+            cout << "the constructor was called "  << this << endl;
         }   
+
 
         
 
-    Myclass(const Myclass &other) {
-        this->Size = other.Size;
-        this->data = new int[other.Size];
-    }
+        Myclass(const Myclass &other) {
+            cout << "the constructor copy was called  " << endl;
+            this->Size = other.Size;
+            
+            this->data = new int[other.Size];
+            for (int i = 0; i < Size; i++) {
+                this->data[i] = other.data[i];
+            }   
+
+        }
+
+        private: 
+            int Size;
 
 
 };
