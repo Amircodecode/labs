@@ -377,12 +377,36 @@ class Point {
 // }
 
 
+class Point {
+    private: 
+        int x;
+        int y;
+    public: 
+        Point() {
+            x = 0;
+            y = 0;
+            
+        }
 
+        Point (int valueX, int valueY) {
+            x = valueX;
+            y = valueY;
+        }
 
+        int getX() {
+            return x;
+        }
+        int getY() {
+            return y;
+        }
+        void setX(int settedX) {
+            x = settedX;
+        }
+        void setY(int settedY) {
+            y = settedY;
+        }
+        void Print() {
+            cout << "x = " << x << " y = " << endl;
+        }
 
-
-
-
-
-
-
+};
