@@ -377,45 +377,47 @@ class Point {
 // }
 
 
-class Point {
-    private: 
-        int x;
-        int y;
-    public: 
-        Point() {
-            x = 0;
-            y = 0;
+// class Point {
+
+//     private: 
+//         int x;
+//         int y;
+//     public: 
+//         Point() {
+//             x = 0;
+//             y = 0;
             
-        }
+//         }
 
-        Point (int valueX, int valueY) {
-            x = valueX;
-            y = valueY;
-        }
+//         Point (int valueX, int valueY) {
+//             x = valueX;
+//             y = valueY;
+//         }
 
-        int getX() {
-            return x;
-        }
-        int getY() {
-            return y;
-        }
-        void setX(int x) {
-            this-> x = x;
-        }
-        void setY(int y) {
-            this-> y = y;
-        }
-        void Print() {
-            cout << "x = " << x << " y = " << endl;
-        }
+//         int getX() {
+//             return x;
+//         }
+//         int getY() {
+//             return y;
+//         }
+//         void setX(int x) {
+//             this-> x = x;
+//         }
+//         void setY(int y) {
+//             this-> y = y;
+//         }
+//         void Print() {
+//             cout << "x = " << x << " y = " << endl;
+//         }
 
-};
+// };
 
-int main() {
-    Point a;
-    // a.setX(5);
-    // a.Print();
+// int main() {
+//     Point a;
+//     // a.setX(5);
+//     // a.Print();
 
 
-    return 0;
-}
+//     return 0;
+// }
+
