@@ -464,3 +464,29 @@ using namespace std;
 
 // int a = 23;
 
+class Myclass {
+    public:
+        int *data;
+        int Size;
+
+        Myclass(int size) {
+            this->data = new int[size];
+
+            
+        }   
+
+        
+
+    Myclass(const Myclass &other) {
+        this->Size = other.Size;
+        this->data = new int[other.Size];
+    }
+
+
+};
+
+int main() {
+    Myclass a(5);
+    
+    return 0;
+}
