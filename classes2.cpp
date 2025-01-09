@@ -437,11 +437,11 @@ class Point {
             this -> x = x;
             this -> y = y;
         }
-        void setX(int x) {
-            this -> x = x;
+        void setX(valueX) {
+            x = valueX;
         }
-        void setY(int y) {
-            this -> y = y;
+        void setY(int valuey) {
+             y = valuey;
         }
         int getX() {
             return x;
@@ -453,3 +453,12 @@ class Point {
             cout << "x = " << x << " y = " << y << endl;
         }
 };
+
+int main() {
+    Point a;
+    a.setX(56);
+    a.Print();
+
+
+    return 0;
+}
