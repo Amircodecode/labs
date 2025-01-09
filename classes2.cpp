@@ -235,45 +235,45 @@ using namespace std;
 //     return 0;
 // }
 
-class Point {
-    private:
-        int x;
-        int  y;
+// class Point {
+//     private:
+//         int x;
+//         int  y;
 
-    public: 
-        Point() {
-            x = 0;
-            y = 0;
-        }
-        // constructor by default 
+//     public: 
+//         Point() {
+//             x = 0;
+//             y = 0;
+//         }
+//         // constructor by default 
 
-        Point(int valueOfX, int valueOfY) {
-            x = valueOfX;
-            y = valueOfY;
-        }
-        // constructor with parametres 
+//         Point(int valueOfX, int valueOfY) {
+//             x = valueOfX;
+//             y = valueOfY;
+//         }
+//         // constructor with parametres 
 
 
-        Point(int valuex, bool boolean) {
-            x = valuex;
-            y = 1;
-        }
-        int GetX() {
-            return x;
-        }
-        int GetY() {
-            return y;
-        }
-        void SetX(int valueX) {
-            x = valueX;
-        }
-        void SetY(int valueY) {
-            y = valueY;
-        }
-        void Print() {
-            cout << "x = " << x << " y = " << y << endl;
-        }
-};
+//         Point(int valuex, bool boolean) {
+//             x = valuex;
+//             y = 1;
+//         }
+//         int GetX() {
+//             return x;
+//         }
+//         int GetY() {
+//             return y;
+//         }
+//         void SetX(int valueX) {
+//             x = valueX;
+//         }
+//         void SetY(int valueY) {
+//             y = valueY;
+//         }
+//         void Print() {
+//             cout << "x = " << x << " y = " << y << endl;
+//         }
+// };
 
 // class MyClass {
 //     int data;
@@ -421,7 +421,6 @@ class Point {
 //     return 0;
 // }
 
-
 class Point {
     private: 
         int x;
@@ -437,11 +436,11 @@ class Point {
             this -> x = x;
             this -> y = y;
         }
-        void setX(valueX) {
-            x = valueX;
+        void SetX(int x) {
+            this -> x = x;
         }
-        void setY(int valuey) {
-             y = valuey;
+        void setY(int y) {
+            this -> y = y;
         }
         int getX() {
             return x;
@@ -456,7 +455,7 @@ class Point {
 
 int main() {
     Point a;
-    a.setX(56);
+    a.SetX(56);
     a.Print();
 
 
