@@ -348,30 +348,33 @@ class Point {
 // }
 
 
-class BankAccount {
-    private:
-        string accoutnNumber;
-        int balance;
+// class BankAccount {
+//     private:
+//         string accoutnNumber;
+//         int balance;
 
-    public:
-        BankAccount(string accNum, int initialBalance) {
-            accoutnNumber = accNum;
-            balance = initialBalance;
-        }
+//     public:
+//         BankAccount(string accNum, int initialBalance) {
+//             accoutnNumber = accNum;
+//             balance = initialBalance;
+//         }
 
-        void deposit(double amount) {
-            balance += amount;
-        }
-        void dispalyAccoutInfo() {
-            cout << "account number: " << accoutnNumber << endl
-                 << " balance: " << balance << endl;
-        }
-        bool withdraw(double amount) {
-            balance -= amount;
-        }
-};
+//         void deposit(double amount) {
+//             balance += amount;
+//         }
+//         void dispalyAccoutInfo() {
+//             cout << "account number: " << accoutnNumber << endl
+//                  << " balance: " << balance << endl;
+//         }
+//         bool withdraw(double amount) {
+//             balance -= amount;
+//         }
+// };
 
-int main() {
-    
-    return 0;
-}
+// int main() {
+//     BankAccount card("sdfalskfj", 100000);
+//     return 0;
+// }
+
+
+
