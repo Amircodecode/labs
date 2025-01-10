@@ -494,7 +494,9 @@ class Myclass {
         }
 
         void operator = (const Myclass &other) {
-            
+            cout << "the = operator is called" << this << endl;
+
+            delete this-> data;
         } 
 
         
