@@ -483,9 +483,9 @@ class Myclass {
         
 
         Myclass(const Myclass &other) {
-            cout << "the constructor copy was called  " << endl;
+            cout << "the constructor copy was called  "  << this << endl;
             this->Size = other.Size;
-            
+
             this->data = new int[other.Size];
             for (int i = 0; i < Size; i++) {
                 this->data[i] = other.data[i];
@@ -493,14 +493,39 @@ class Myclass {
 
         }
 
+        void operator = (const Myclass &other) {
+            
+        } 
+
+        
+        ~Myclass() {
+            cout << "destructed was called " << this << endl;
+            delete[] data;
+        }
+
+
+
         private: 
             int Size;
 
 
 };
 
+void Foo(Myclass value) {
+    cout << "foo was called" << endl;
+}
+
+Myclass Foo2() {
+    cout << "foo2 was called" << endl;
+    Myclass temp(2);
+
+    return temp;
+}
+
 int main() {
     Myclass a(5);
+    Myclass b(6);
+    a = b;
     
     return 0;
 }
