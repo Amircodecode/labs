@@ -543,7 +543,8 @@ Myclass Foo2() {
 int main() {
     Myclass a(5);
     Myclass b(6);
-    a = b;
+    Myclass c(4);
+    a = b = c;
     
     return 0;
 }
