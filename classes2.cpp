@@ -493,10 +493,26 @@ class Myclass {
 
         }
 
-        void operator = (const Myclass &other) {
+        Myclass & operator = (const Myclass &other) {
             cout << "the = operator is called" << this << endl;
 
-            delete this-> data;
+            this->Size = other.Size;
+
+            if (this -> data!=nullptr) {
+                delete this-> data;
+            }
+            
+            this->data = new int[other.Size];
+
+            for (int i = 0; i < Size; i++) {
+
+                this->data[i] = other.data[i];
+
+            }   
+
+
+            return *this;
+
         } 
 
         
