@@ -540,11 +540,5 @@ Myclass Foo2() {
     return temp;
 }
 
-int main() {
-    Myclass a(5);
-    Myclass b(6);
-    Myclass c(4);
-    a = b = c;
-    
-    return 0;
-}
+
+
