@@ -464,78 +464,80 @@ using namespace std;
 
 // int a = 23;
 
-class Myclass {
-    public:
-        int *data;
+// class Myclass {
+//     public:
+//         int *data;
 
-        Myclass(int size) {
-            this->Size = size;
-            this->data = new int[size];
+//         Myclass(int size) {
+//             this->Size = size;
+//             this->data = new int[size];
 
-            for (int i = 0; i < size; i++) {
-                data[i] = i;
-            }
+//             for (int i = 0; i < size; i++) {
+//                 data[i] = i;
+//             }
 
-            cout << "the constructor was called "  << this << endl;
-        }   
+//             cout << "the constructor was called "  << this << endl;
+//         }   
 
 
         
 
-        Myclass(const Myclass &other) {
-            cout << "the constructor copy was called  "  << this << endl;
-            this->Size = other.Size;
+//         Myclass(const Myclass &other) {
+//             cout << "the constructor copy was called  "  << this << endl;
+//             this->Size = other.Size;
 
-            this->data = new int[other.Size];
-            for (int i = 0; i < Size; i++) {
-                this->data[i] = other.data[i];
-            }   
+//             this->data = new int[other.Size];
+//             for (int i = 0; i < Size; i++) {
+//                 this->data[i] = other.data[i];
+//             }   
 
-        }
+//         }
 
-        Myclass & operator = (const Myclass &other) {
-            cout << "the = operator is called" << this << endl;
+//         Myclass & operator = (const Myclass &other) {
+//             cout << "the = operator is called" << this << endl;
 
-            this->Size = other.Size;
+//             this->Size = other.Size;
 
-            if (this -> data!=nullptr) {
-                delete this-> data;
-            }
+//             if (this -> data!=nullptr) {
+//                 delete this-> data;
+//             }
             
-            this->data = new int[other.Size];
+//             this->data = new int[other.Size];
 
-            for (int i = 0; i < Size; i++) {
+//             for (int i = 0; i < Size; i++) {
 
-                this->data[i] = other.data[i];
+//                 this->data[i] = other.data[i];
 
-            }   
+//             }   
 
 
-            return *this;
+//             return *this;
 
-        } 
+//         } 
 
         
-        ~Myclass() {
-            cout << "destructed was called " << this << endl;
-            delete[] data;
-        }
+//         ~Myclass() {
+//             cout << "destructed was called " << this << endl;
+//             delete[] data;
+//         }
 
 
 
-        private: 
-            int Size;
+//         private: 
+//             int Size;
 
 
-};
+// };
 
-void Foo(Myclass value) {
-    cout << "foo was called" << endl;
-}
+// void Foo(Myclass value) {
+//     cout << "foo was called" << endl;
+// }
 
-Myclass Foo2() {
-    cout << "foo2 was called" << endl;
-    Myclass temp(2);
+// Myclass Foo2() {
+//     cout << "foo2 was called" << endl;
+//     Myclass temp(2);
 
-    return temp;
-}
+//     return temp;
+// }
+
+
