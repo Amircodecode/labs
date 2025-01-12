@@ -544,14 +544,31 @@ using namespace std;
 class Myclass {
     public:
 
-        Myclass(int data) {
-            this->data = data;
+        Myclass(int size) {
+            this-> Size = size;
+            this->data = new int[size];
+
+            for (int i = 0; i < size; i++) {
+                data[i] = i;
+            }
             cout << "consructor was called"<< this << endl;
+        }
+
+        Myclass(const Myclass &other) {
+            this->data = new int[other.Size];
+
+            for (int i = 0; i < other.Size; i++) {
+
+                this->data[i] = other.data[i];
+                
+            }
+            cout << "the copy destructor was called" << this << endl;
         }
 
 
         ~Myclass() {
             cout << "destructor was called" << this << endl;
+            delete[] data;
         }
 
         void Print() {
@@ -559,16 +576,21 @@ class Myclass {
         }
 
         private: 
-            int data;
+            int *data;
+            int Size;
 };
+
+void Foo(Myclass value) {
+    cout << "the function foo was called" << endl;
+}
 
 
 int main() {
 
     Myclass a(6);
     Myclass b(5);
-    a.Print();
-    b.Print();
+
+
 
 
     return 0;
