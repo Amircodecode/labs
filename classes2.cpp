@@ -539,19 +539,3 @@ Myclass Foo2() {
 
     return temp;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
