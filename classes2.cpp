@@ -541,4 +541,35 @@ using namespace std;
 // }
 
 
+class Myclass {
+    public:
 
+        Myclass(int data) {
+            this->data = data;
+            cout << "consructor was called"<< this << endl;
+        }
+
+
+        ~Myclass() {
+            cout << "destructor was called" << this << endl;
+        }
+
+        void Print() {
+            cout << this->data << endl;
+        }
+
+        private: 
+            int data;
+};
+
+
+int main() {
+
+    Myclass a(6);
+    Myclass b(5);
+    a.Print();
+    b.Print();
+
+
+    return 0;
+}
